@@ -17,7 +17,6 @@ app.get('/products', (req, res) => {
       price: 150
     }
   ])
-
 })
 
 app.listen(port, () => {
