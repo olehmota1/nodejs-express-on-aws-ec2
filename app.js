@@ -17,9 +17,10 @@ app.get('/products', (req, res) => {
       price: 150
     }
   ])
+
 })
 
-app.listen(port, ()=> {
+app.listen(port, () => {
   console.log(`Demo app is up and listening to port: ${port}`);
 })
- 
+
