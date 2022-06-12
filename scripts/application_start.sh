@@ -1,10 +1,10 @@
 #!/bin/bash
 
 #give permission for everything in the express-app directory
-sudo chmod -R 777 /home/ec2-user/backend
+sudo chmod -R 777 /home/ec2-user/express-app
 
 #navigate into our working directory where we have all our github files
-cd /home/ec2-user/backend
+cd /home/ec2-user/express-app
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"	
@@ -14,13 +14,5 @@ export NVM_DIR="$HOME/.nvm"
 #install node modules
 npm install
 
-npm i -g @nestjs/cli
-
-npm install pm2 -g
-
-#build project
-npm run build
-
-#start project
-pm2 start dist/src/main --name "customercity"
-
+#start our node app in the background
+node app.js > app.out.log 2> app.err.log < /dev/null & 
