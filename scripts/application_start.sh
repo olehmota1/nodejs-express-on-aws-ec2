@@ -19,6 +19,7 @@ npm i -g @nestjs/cli pm2
 #build project
 npm run build
 
+
 #start project
 pm2 start dist/src/main --name "customercity"
 
